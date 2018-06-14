@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Badge.Abstractions", "Plugin.Badge.Abstractions\Plugin.Badge.Abstractions.csproj", "{99155358-BFE1-4E45-8F84-78614F69B7FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Badge.Abstractions", "Plugin.Badge.Abstractions\Plugin.Badge.Abstractions.csproj", "{99155358-BFE1-4E45-8F84-78614F69B7FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Badge.iOS", "Plugin.Badge.iOS\Plugin.Badge.iOS.csproj", "{3EA52389-9136-44EB-8A4E-C6C2B30094D0}"
 EndProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Badge.Droid", "Plugi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{F2A4C316-91B1-45B8-81B6-64235C89A2A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Badge.Sample", "Sample\Plugin.Badge.Sample\Plugin.Badge.Sample.csproj", "{E66692BA-0BA6-4B5C-A519-DD0102B88231}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Badge.Sample", "Sample\Plugin.Badge.Sample\Plugin.Badge.Sample.csproj", "{E66692BA-0BA6-4B5C-A519-DD0102B88231}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Badge.Sample.Droid", "Sample\Plugin.Badge.Sample.Droid\Plugin.Badge.Sample.Droid.csproj", "{119FCCAA-7446-4DE0-8F47-5A0A08AC4DB3}"
 EndProject

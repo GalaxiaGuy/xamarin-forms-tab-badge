@@ -32,6 +32,13 @@ namespace Plugin.Badge.Sample
                             Command = new Command(CreateTabedPageInsideNavigationPage),
                             VerticalOptions = LayoutOptions.Center
                         },
+
+                        new Button
+                        {
+                            Text = "Tabbed page with bottom navigation on Android",
+                            Command = new Command(CreateTabedPageWithBottomNavigation),
+                            VerticalOptions = LayoutOptions.Center
+                        },
                     }
                 }
             });
@@ -83,6 +90,32 @@ namespace Plugin.Badge.Sample
 
             _tabbedPage.ToolbarItems.Add(new ToolbarItem("Item1", "tabicon.png", () => { }, ToolbarItemOrder.Primary));
             (MainPage as NavigationPage)?.PushAsync(_tabbedPage);
+        }
+
+        private void CreateTabedPageWithBottomNavigation()
+        {
+            var tab1 = CreateTab1();
+
+            var tab2 = CreateTab2();
+
+            var tab3 = CreateTab3();
+
+            // The root page of your application
+            _tabbedPage = new Xamarin.Forms.TabbedPage
+            {
+                Title = "Tab badge sample",
+                Children =
+                {
+                    tab1,
+                    tab2,
+                    tab3
+                }
+            };
+
+            var config = _tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>();
+            Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetToolbarPlacement(config, Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement.Bottom);
+            _tabbedPage.ToolbarItems.Add(new ToolbarItem("Item1", "tabicon.png", () => { }, ToolbarItemOrder.Primary));
+            MainPage = new NavigationPage(_tabbedPage);
         }
 
         private ContentPage CreateTab2()
