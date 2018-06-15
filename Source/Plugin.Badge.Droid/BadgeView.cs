@@ -154,8 +154,6 @@ namespace Plugin.Badge.Droid
             group.SetClipToPadding(false);            
 
             var container = new FrameLayout(_context);
-            container.SetClipChildren(false);
-            container.SetClipToPadding(false);
             var index = group.IndexOfChild(target);
 
             group.RemoveView(target);
