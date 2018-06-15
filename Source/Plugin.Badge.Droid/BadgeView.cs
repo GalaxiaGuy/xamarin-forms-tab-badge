@@ -140,7 +140,8 @@ namespace Plugin.Badge.Droid
 
         private void ApplyTo(View target)
         {
-            var lp = target.LayoutParameters;
+            var lp = new FrameLayout.LayoutParams(target.LayoutParameters);
+            lp.Gravity = GravityFlags.CenterHorizontal;
             var parent = target.Parent;
 
             var group = parent as ViewGroup;
@@ -157,7 +158,6 @@ namespace Plugin.Badge.Droid
             var index = group.IndexOfChild(target);
 
             group.RemoveView(target);
-            target.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
             group.AddView(container, index, lp);
 
             container.AddView(target);
