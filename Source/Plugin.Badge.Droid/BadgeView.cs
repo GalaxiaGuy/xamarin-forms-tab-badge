@@ -151,13 +151,15 @@ namespace Plugin.Badge.Droid
             }
 
             group.SetClipChildren(false);
-            group.SetClipToPadding(false);
-            
+            group.SetClipToPadding(false);            
 
             var container = new FrameLayout(_context);
+            container.SetClipChildren(false);
+            container.SetClipToPadding(false);
             var index = group.IndexOfChild(target);
 
             group.RemoveView(target);
+            target.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
             group.AddView(container, index, lp);
 
             container.AddView(target);
